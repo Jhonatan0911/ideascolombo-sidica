@@ -1,0 +1,19 @@
+.maxx-width{
+	width: auto;
+}
+.border-perzo {
+	box-shadow: 0 0 1px #fb483a !important;
+}
+.img-size{
+	
+	width: 200px;
+}
+#cerrarhp {
+	position: relative;
+}
+
+#cerrarhp * {
+	float: left;
+	font-size: 20px;
+	margin-right: 5px;
+}
