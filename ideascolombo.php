@@ -700,14 +700,14 @@ $portafolio = $bd->consulta("SELECT portafolio.nameImg as nameimg, tipo_portafol
 							</div>
 
 							<div class="flex flex-col mb-6">
-								<label for="nombreApreTxt" class="text-base font-medium text-gray-900">Programa o Especialidad:</label>
+								<label for="programaTxt" class="text-base font-medium text-gray-900">Programa o Especialidad:</label>
 								<div class="relative">
 									<input id="programaTxt" type="text" name="programaTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Programa o Especialidad" />
 								</div>
 							</div>
 
 							<div class="flex flex-col mb-6">
-								<label for="nombreApreTxt" class="text-base font-medium text-gray-900">Ficha:</label>
+								<label for="fichaTxt" class="text-base font-medium text-gray-900">Ficha:</label>
 								<div class="relative">
 									<input id="fichaTxt" type="text" name="fichaTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Número de ficha" />
 								</div>
