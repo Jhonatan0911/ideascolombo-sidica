@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+	console.log("Holaa");
+
+
 	$("#cancelar").click(function(){
 		$("#form-semi")[0].reset();
 		$("#form-semi").find('input.valor').each(function(){
@@ -21,6 +24,11 @@ $(document).ready(function(){
 	});
 
 	$("#reg_save").click(function(){
+
+		console.log("Holaa");
+
+		alert_ready("Registro Exitoso!");
+
 		var form = $("#form-semi").serialize();
 		var txt = Validar_inputTxt("form-semi");
 		var num = Validar_inputNum("form-semi");
@@ -29,6 +37,8 @@ $(document).ready(function(){
 		var mail = valcorreo("form-semi");
 		var check = Validar_inputCheck("form-semi");
 		var confirpass = valpass();
+
+		console.log(form);
 		
 		if(txt && num && select){
 			if(fecha){

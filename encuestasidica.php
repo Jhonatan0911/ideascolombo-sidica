@@ -20,12 +20,26 @@ $tipoRol = $bd->consulta("SELECT * FROM roles");
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="keywords" content="Sennova, Sidica, Fabrica Software, Sena, Colombo Alemán">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="author" content="Juan David Castro">
+	<meta name="author" content="Jhonatan Piña">
 	<link href="img/favicoSENA.png" rel="icon" type="image/x-icon">
 	<title>SIDICA</title>
 
-	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/tailwind.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/line-icons.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/menu_sideslide.css">
+	<link rel="stylesheet" href="css/alertify.min.css">
+	<link rel="stylesheet" href="css/themes/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main2.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/materialdesignicons.min.css">
+	<link rel="stylesheet" id="colors" href="css/colors/morado.css" type="text/css">
 
 	<!-- Google fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,288 +141,255 @@ $tipoRol = $bd->consulta("SELECT * FROM roles");
 						</div>
 					</div>
 					<div class="row">
-						<form id="form-semi">
-							<div class="row col-12 justify-content-start">
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="t_rol" class="text-base font-medium text-gray-900">Rol:</label>
-									<div class="relative">
-										<select class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" id="t_rol" name="t_rol">
+					<form id="form-semi">
+								<div class="row col-12 justify-content-start">
+									<div class="input-group mb-3 col-lg-12">
+										<div class="input-group-prepend">
+											<label class="input-group-text" for="t_rol">Rol</label>
+										</div>
+										<select class="custom-select" id="t_rol" name="t_rol">
 											<option value="0" selected>Seleccione...</option>
 											<?php foreach ($tipoRol as $dato): ?>
 												<option value="<?php echo $dato['id_roles']; ?>"><?php echo utf8_encode($dato['rol']); ?></option>
 											<?php endforeach; ?>
 										</select>
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="txtNombre" class="text-base font-medium text-gray-900">Nombre:</label>
-									<div class="relative">
-										<input id="txtNombre" type="text" name="txtNombre" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa tu nombre" />
+									<div class="form-group col-lg-6">
+										<input type="text" id="txtNombre" placeholder="Nombre" required="" class="valor form-control" name="nombre">
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="txtApellido" class="text-base font-medium text-gray-900">Apellido:</label>
-									<div class="relative">
-										<input id="txtApellido" type="text" name="txtApellido" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa tu apellido" />
+									<div class="form-group col-lg-6">
+										<input id="txtApellido" type="text"  placeholder="Apellido" class="valor form-control" required="" name="apellido">
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="t_documento" class="text-base font-medium text-gray-900">Tipo de Documento:</label>
-									<div class="relative">
-										<select class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" id="t_documento" name="t_documento">
+									<div class="input-group mb-3 col-lg-6">
+										<div class="input-group-prepend">
+											<label class="input-group-text" for="t_documento">Tipo Documento</label>
+										</div>
+										<select class="custom-select" id="t_documento" name="t_documento">
 											<option value="0" selected>Seleccione...</option>
 											<?php foreach ($t_doc as $dato): ?>
 												<option value="<?php echo $dato['id_doc']; ?>"><?php echo utf8_encode($dato['tipo']); ?></option>
 											<?php endforeach; ?>
 										</select>
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="txtDocumento" class="text-base font-medium text-gray-900">Documento:</label>
-									<div class="relative">
-										<input id="txtDocumento" type="text" name="txtDocumento" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Número de documento" />
+									<div class="form-group col-lg-6">
+										<input id="txtDocumento" type="number" placeholder="Documento" class="valor form-control" required="" name="documento">
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="t_sangre" class="text-base font-medium text-gray-900">Tipo de Sangre:</label>
-									<div class="relative">
-										<select class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" id="t_sangre" name="t_sangre">
+									<div class="input-group mb-3 col-lg-6">
+										<div class="input-group-prepend">
+											<label class="input-group-text" for="t_sangre">Tipo Sangre</label>
+										</div>
+										<select class="custom-select" id="t_sangre" name="t_sangre">
 											<option value="0" selected>Seleccione...</option>
 											<?php foreach ($t_san as $dato): ?>
 												<option value="<?php echo $dato['id_sa']; ?>"><?php echo utf8_encode($dato['tipo']); ?></option>
 											<?php endforeach; ?>
 										</select>
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="fechaNac" class="text-base font-medium text-gray-900">Fecha de nacimiento:</label>
-									<div class="relative">
-										<input id="fechaNac" type="date" name="fechaNac" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Número de documento" />
+									<div class="form-group col-lg-6">
+										<input type="date" class="valor form-control" required name="fechaNac" placeholder="Fecha de nacimiento">
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="txtTelefono" class="text-base font-medium text-gray-900">Teléfono:</label>
-									<div class="relative">
-										<input id="txtTelefono" type="text" name="txtTelefono" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa tu correo" />
+									<div class="form-group col-lg-6">
+										<input id="txtTelefono" type="number"  placeholder="Telefono" class="valor form-control" required="" name="telefono" pattern="{5,10}">
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="txtCorreo" class="text-base font-medium text-gray-900">Correo:</label>
-									<div class="relative">
-										<input id="txtCorreo" type="email" name="txtCorreo" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa tu correo" />
+									<div class="form-group col-lg-6">
+										<input id="txtCorreo" type="email" placeholder="Correo  " class="valor form-control" required="" name="correo">
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="txtDireccion" class="text-base font-medium text-gray-900">Dirección:</label>
-									<div class="relative">
-										<input id="txtDireccion" type="text" name="txtDireccion" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Dirección de residencia" />
+									<div class="form-group col-lg-6">
+										<input id="txtDireccion" type="text" placeholder="Dirección" class="valor form-control" required="" name="direccion">
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="txtFicha" class="text-base font-medium text-gray-900">Ficha:</label>
-									<div class="relative">
-										<input id="txtFicha" type="text" name="txtFicha" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Número de ficha" />
+									<div class="form-group col-lg-6">
+										<input id="txtFicha" type="number" placeholder="Ficha" class="valor form-control" required="" name="ficha">
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="program" class="text-base font-medium text-gray-900">Programa de Formación:</label>
-									<div class="relative">
-										<select class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" id="program" name="program">
+									<div class="input-group mb-3 col-lg-12">
+										<div class="input-group-prepend">
+											<label class="input-group-text" for="progam">Programa Formación</label>
+										</div>
+										<select class="custom-select" id="progam" name="progam">
 											<option value="0" selected>Seleccione...</option>
 											<?php foreach ($programa as $dato): ?>
 												<option value="<?php echo $dato['id_prog']; ?>"><?php echo utf8_encode($dato['programa']); ?></option>
 											<?php endforeach; ?>
 										</select>
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="l_investigacion" class="text-base font-medium text-gray-900">Linea de investigación:</label>
-									<div class="relative">
-										<select class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" id="l_investigacion" name="l_investigacion">
+									<div class="input-group mb-3 col-lg-12">
+										<div class="input-group-prepend">
+											<label class="input-group-text" for="l_investigacion">Linea Investigación</label>
+										</div>
+										<select class="custom-select" id="l_investigacion" name="l_investigacion">
 											<option value="0" selected>Seleccione...</option>
 											<?php foreach ($linea as $dato): ?>
 												<option value="<?php echo $dato['id_li']; ?>"><?php echo utf8_encode($dato['l_investigacion']); ?></option>
 											<?php endforeach; ?>
 										</select>
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="trim" class="text-base font-medium text-gray-900">Trimestre:</label>
-									<div class="relative">
-										<select class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" id="trim" name="trim">
+									<div class="input-group mb-3 col-lg-6">
+										<div class="input-group-prepend">
+											<label class="input-group-text" for="trim">Trimestre</label>
+										</div>
+										<select class="custom-select" id="trim" name="trim">
 											<option value="0" selected>Seleccione...</option>
 											<?php foreach ($trim as $dato): ?>
 												<option value="<?php echo $dato['id_trim']; ?>"><?php echo utf8_encode($dato['trimestre']); ?></option>
 											<?php endforeach; ?>
 										</select>
 									</div>
-								</div>
 
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="txtEdad" class="text-base font-medium text-gray-900">Edad:</label>
-									<div class="relative">
-										<input id="txtEdad" type="number" name="txtEdad" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa tu edad" />
+									<div class="form-group col-lg-6">
+										<input id="txtEdad" type="number" placeholder="Edad" class="valor form-control" required="" name="edad">
+									</div>
+
+									<div class="form-group col-sm-6 col-lg-6">
+										<input id="pass" type="password" placeholder="Contraseña" class="valor form-control" required="" name="pass">
+									</div>
+
+									<div class="form-group col-sm-6 col-lg-6">
+										<input id="confir_pass" type="password" placeholder="Confirmar Contraseña" class="valor form-control" required="" name="c_pass">
+									</div>
+
+									<div class="row col-lg-12">
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-3 col-lg-2">Mañana</div>
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-3 col-lg-6">Tarde</div>
+
+										<div class="col-xs-6 col-md-3 col-lg-3">LUNES</div>
+
+										<div class="col-xs-2 col-md-3 col-lg-2">
+											<input type="checkbox" id="cbx1" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="1" style="display: none">
+											<label for="cbx1" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-3 col-lg-6">
+											<input type="checkbox" id="cbx6" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="1" style="display: none">
+											<label for="cbx6" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+
+										<div class="col-xs-6 col-md-3 col-lg-3">MARTES</div>
+
+										<div class="col-xs-2 col-md-3 col-lg-2">
+											<input type="checkbox" id="cbx2" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="2" style="display: none">
+											<label for="cbx2" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-3 col-lg-6">
+											<input type="checkbox" id="cbx7" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="2" style="display: none">
+											<label for="cbx7" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+
+										<div class="col-xs-6 col-md-3 col-lg-3">MIERCOLES</div>
+
+										<div class="col-xs-2 col-md-3 col-lg-2">
+											<input type="checkbox" id="cbx3" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="3" style="display: none">
+											<label for="cbx3" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-3 col-lg-6">
+											<input type="checkbox" id="cbx8" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="3" style="display: none">
+											<label for="cbx8" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+
+										<div class="col-xs-6 col-md-3 col-lg-3">JUEVES</div>
+
+										<div class="col-xs-2 col-md-3 col-lg-2">
+											<input type="checkbox" id="cbx4" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="4" style="display: none">
+											<label for="cbx4" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-3 col-lg-6">
+											<input type="checkbox" id="cbx9" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="4" style="display: none">
+											<label for="cbx9" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+
+										<div class="col-xs-6 col-md-3 col-lg-3">VIERNES</div>
+
+										<div class="col-xs-2 col-md-3 col-lg-2">
+											<input type="checkbox" id="cbx5" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="5" style="display: none">
+											<label for="cbx5" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+										<div class="col-xs-2 col-md-1 col-lg-1"></div>
+										<div class="col-xs-2 col-md-3 col-lg-6">
+											<input type="checkbox" id="cbx10" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="5" style="display: none">
+											<label for="cbx10" class="cbx">
+												<span>
+													<svg width="12px" height="10px" viewBox="0 0 12 10">
+														<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+													</svg>
+												</span>
+											</label>
+										</div>
+										<br><br>
 									</div>
 								</div>
-
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="pass" class="text-base font-medium text-gray-900">Contraseña:</label>
-									<div class="relative">
-										<input id="pass" type="password" name="pass" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa una contraseña" />
-									</div>
-								</div>
-
-								<div class="flex flex-col mb-3 col-lg-6">
-									<label for="confir_pass" class="text-base font-medium text-gray-900">Confirmar contraseña:</label>
-									<div class="relative">
-										<input id="confir_pass" type="password" name="confir_pass" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Confirma tu contraseña" />
-									</div>
-								</div>
-
-								<div class="row col-lg-12">
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-3 col-lg-2">Mañana</div>
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-3 col-lg-6">Tarde</div>
-
-									<div class="col-xs-6 col-md-3 col-lg-3">LUNES</div>
-
-									<div class="col-xs-2 col-md-3 col-lg-2">
-										<input type="checkbox" id="cbx1" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="1" style="display: none">
-										<label for="cbx1" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-3 col-lg-6">
-										<input type="checkbox" id="cbx6" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="1" style="display: none">
-										<label for="cbx6" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-
-									<div class="col-xs-6 col-md-3 col-lg-3">MARTES</div>
-
-									<div class="col-xs-2 col-md-3 col-lg-2">
-										<input type="checkbox" id="cbx2" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="2" style="display: none">
-										<label for="cbx2" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-3 col-lg-6">
-										<input type="checkbox" id="cbx7" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="2" style="display: none">
-										<label for="cbx7" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-
-									<div class="col-xs-6 col-md-3 col-lg-3">MIERCOLES</div>
-
-									<div class="col-xs-2 col-md-3 col-lg-2">
-										<input type="checkbox" id="cbx3" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="3" style="display: none">
-										<label for="cbx3" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-3 col-lg-6">
-										<input type="checkbox" id="cbx8" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="3" style="display: none">
-										<label for="cbx8" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-
-									<div class="col-xs-6 col-md-3 col-lg-3">JUEVES</div>
-
-									<div class="col-xs-2 col-md-3 col-lg-2">
-										<input type="checkbox" id="cbx4" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="4" style="display: none">
-										<label for="cbx4" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-3 col-lg-6">
-										<input type="checkbox" id="cbx9" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="4" style="display: none">
-										<label for="cbx9" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-
-									<div class="col-xs-6 col-md-3 col-lg-3">VIERNES</div>
-
-									<div class="col-xs-2 col-md-3 col-lg-2">
-										<input type="checkbox" id="cbx5" class="inp-cbx" data-preg="check" name="horarios_maniana[]" value="5" style="display: none">
-										<label for="cbx5" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-									<div class="col-xs-2 col-md-1 col-lg-1"></div>
-									<div class="col-xs-2 col-md-3 col-lg-6">
-										<input type="checkbox" id="cbx10" class="inp-cbx" data-preg="check" name="horarios_tarde[]" value="5" style="display: none">
-										<label for="cbx10" class="cbx">
-											<span>
-												<svg width="12px" height="10px" viewBox="0 0 12 10">
-													<polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-												</svg>
-											</span>
-										</label>
-									</div>
-									<br><br>
-								</div>
-							</div>
-						</form>
+							</form>
 					</div>
 				</div>
 			</div>
