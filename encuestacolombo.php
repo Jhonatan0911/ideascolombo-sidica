@@ -34,44 +34,15 @@ $portafolio = $bd->consulta("SELECT portafolio.nameImg as nameimg, tipo_portafol
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	<!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/85219bca29.js" crossorigin="anonymous"></script>
 	<!-- Tailwind -->
 	<script src="https://cdn.tailwindcss.com"></script>
 	<!-- Bootstrapp -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-	<style>
-		.img-share{
-			width: 200px !important;
-			height: 200px!important;
-			background-image: url("img/home/share.png");
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		a:hover{
-			color: #fff !important;
-		}
-		.btn-secondary{
-			width: 20% !important;
-			height: 50px !important;
-		}
-		.modal-dialog{
-			max-width: 800px !important;
-		}
-		@media screen and (max-width: 600px) {
-			.btn-secondary{
-				width: 70% !important;
-				height: 50px !important;
-			}
-		}
-	</style>
 </head>
 
 <body>
-	<!-- Navbar -->
+    <!-- Navbar -->
 	<div class="relative bg-third fixed top-0 shadow-xl w-100" style="z-index: 99;">
 		<div class="mx-auto py-1 md:px-24 px-6">
 			<div class="flex justify-between items-center md:justify-start ">
@@ -143,132 +114,105 @@ $portafolio = $bd->consulta("SELECT portafolio.nameImg as nameimg, tipo_portafol
 
 	</div>
 
-	<!-- Header -->
-	<section id="header-colombo" class="header-colombo">
-	<img class="img-fluid" src="img/colombo/header.png"  alt="">
+	<!-- Encuesta -->
+	<div class="w100">
+		<img class="w100" src="img/ideascolombo/header.png" alt="">
+	</div>
+	<div class="container">
+		<div class="card shadow-xl my-3">
+			<div class="card-body pt-0">
+				<div id="cajaRegIdea" class="container">
+					<form id="formIdeas">
+						<input type="hidden" id="idApre" name="idApre">
+						<div class="row my-3">
+							<div class="col-12 text-center my-2">
+								<h6 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-dark text-white-900 sm:text-4xl">FORMATO DE PRE-INSCRIPCIÓN <span class="text-orange"><b>IDEAS COLOMBO</b></span></h6>
+							</div>
+						</div>
+						<div class="row">
+							<div class="flex flex-col mb-3">
+								<label for="proyectoTxt" class="text-base font-medium text-gray-900">Titulo de la propuesta:</label>
+								<div class="relative">
+									<input id="proyectoTxt" type="text" name="proyectoTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa el titulo de la propuesta" />
+								</div>
+							</div>
+							<div class="flex flex-col mb-6">
+								<label for="nombreInsTxt" class="text-base font-medium text-gray-900">Instructor:</label>
+								<div class="relative">
+									<input id="nombreInsTxt" type="text" name="nombreInsTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Nombre del instructor" />
+								</div>
+							</div>
+							<div class="flex flex-col mb-6">
+								<label for="nombreApreTxt" class="text-base font-medium text-gray-900">Aprendiz:</label>
+								<div class="relative">
+									<input id="nombreApreTxt" type="text" name="nombreApreTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Nombre del aprendiz" />
+								</div>
+							</div>
 
-	</section>
-	<!-- Pre-inscripción -->
-	<section>
-	<div class="py-12 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
-		<div class="lg:text-center">
-			<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-dark text-white-900 sm:text-4xl">FORMATO DE PRE-INSCRIPCIÓN</p>
-			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Ideas Colombo 2022 Edición 2 Pensando en ciencia</p>
-		</div>
-		<div class="mt-10">
-			<div class="text-center">
-			<button class="btn-secondary"> <a href="encuestacolombo.php"> Pre-inscribe tu idea Colombo </a> </button>
-			</div>
-		</div>
-		</div>
-	</div>
-	</section>
-	<!-- Imagen -->
-	<section id="header-colombo" class="header-colombo">
-	<img src="/assets/img/colombo/home.jpg" class="w-100" alt="">
-	</section>
-	<!-- Como inscrirbe -->
-	<section>
-	<div class="py-12 bg-white">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
-		<div class="lg:text-center">
-			<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-dark text-white-900 sm:text-4xl">REGLAMENTO DE LA INICIATIVA</p>
-			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Ideas Colombo 2022 Edición 2 Pensando en ciencia</p>
-		</div>
-		<div class="mt-10">
-			<div class="lg:text-center relative mx-auto">
-			<img class="mx-auto w-70" src="img/colombo/pasos.png" alt="">
-			</div>
-		</div>
-		<div class="mt-10">
-			<div class="text-center">
-			<button class="btn-secondary"> <a href="assets/pdf/Terminos y condiciones.pdf" download="reglamento.pdf">Descarga el reglamento</a></button>
-			</div>
-		</div>
-		</div>
-	</div>
-	</section>
-	<!-- Footer -->
-	<section id="contactanos" class="contactanos">
-	<div class="bg-third">
-		<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-		<h2 class="tracking-tight text-gray-900 ">
-			<span class="block text-3xl font-extrabold sm:text-4xl">Participa y Compite con nosotros.</span>
-			<span class="block text-3xl font-extrabold secondary mb-3 sm:text-4xl">SIDICA</span>
-			<span class="block text-base max-w-xl">Formar capital humano en las áreas de ELECTRÓNICA Y TELECOMUNICACIONES, TECNOLOGÍAS VIRTUALES y DISEÑO E INGENIERÍA, con habilidades y destrezas en actividades de investigación aplicada, Desarrollo Tecnológico e Innovación, con el fin de incrementar la capacidad de generar desarrollo tecnológico e innovación en las empresas de la Región Caribe y Colombia.</span>
-			<div class="space-x-2 flex text-sm font-bold mt-3">
-			<label>
-				<button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-white bg-secondary" type="button" aria-label="Like">
-				<i class="fab fa-facebook"></i>
-				</button>
-			</label>
-			<label>
-				<button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-white bg-secondary" type="button" aria-label="Like">
-				<i class="fab fa-twitter"></i>
-				</button>
-			</label>
-			<label>
-				<button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-white bg-secondary" type="button" aria-label="Like">
-				<i class="fab fa-instagram"></i>
-				</button>
-			</label>
-			<label>
-				<button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-white bg-secondary" type="button" aria-label="Like">
-				<i class="fab fa-google"></i>
-				</button>
-			</label>
-			</div>
-		</h2>
-		<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-			<div class="flex font-sans">
-			<div class="">
-				<div class="img-share d-none d-md-block"></div>
-			</div>
-			<form class="flex-auto sm:p-6">
-				<div class="flex flex-wrap">
-				<div class="w-full flex-none mt-2 order-1 text-3xl font-bold secondary mb-3">
-					Contactanos
+							<div class="flex flex-col mb-6">
+								<label for="programaTxt" class="text-base font-medium text-gray-900">Programa o Especialidad:</label>
+								<div class="relative">
+									<input id="programaTxt" type="text" name="programaTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Programa o Especialidad" />
+								</div>
+							</div>
+
+							<div class="flex flex-col mb-6">
+								<label for="fichaTxt" class="text-base font-medium text-gray-900">Ficha:</label>
+								<div class="relative">
+									<input id="fichaTxt" type="text" name="fichaTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Número de ficha" />
+								</div>
+							</div>
+
+							<div class="flex flex-col mb-3">
+								<label for="emailTxt" class="text-base font-medium text-gray-900">Correo:</label>
+								<div class="relative">
+									<input id="emailTxt" type="email" name="emailTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa tu correo" />
+								</div>
+							</div>
+
+							<div class="flex flex-col mb-3">
+								<label for="telTxt" class="text-base font-medium text-gray-900">Teléfono:</label>
+								<div class="relative">
+									<input id="telTxt" type="text" name="telTxt" class="required form-control text-sm placeholder-gray-500 pl-4 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400" placeholder="Ingresa tu correo" />
+								</div>
+							</div>
+
+						</div>
+						<div class="row mt-4">
+
+							<div class="col-12 mb-3">
+								<div class="row">
+									<div class="col-3">
+										<div class="d-flex flex-column text-center">
+											<h6>
+												Breve Descripción de la propuesta
+											</h6>
+											<img class="img-fluid" src="img/ideascolombo/cerebro.png" alt="cerebro.png">
+										</div>
+									</div>
+									<div class="col-9">
+										<div class="form-group">
+											<textarea class="required form-control b-black" id="ideaTxt" name="ideaTxt" rows="12" placeholder="max. 300 palabras, min. 150"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex mx-auto" id="footer2">
+								<div class="mx-auto">
+									<button id="reg_idea" type="button" class="text-lg block w-full px-5 mt-3 py-3 text-center font-medium btn-secondary">Registrar</button>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-4">
+							<div class="col-12">
+								<img class="img-fluid w-100" src="img/ideascolombo/piecera.png" alt="">
+							</div>
+						</div>
+					</form>
 				</div>
-				</div>
-				<dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
-				<dd class="text-indigo-600 flex items-center dark:text-indigo-400">
-					<span>Dirección:</span>
-				</dd>
-				<dd class="flex items-center">
-					<svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-2 text-slate-300">
-					</svg>
-					Calle 30 No. 3E-164, Barranquilla (Atlántico)
-				</dd>
-				</dl>
-				<dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
-				<dd class="text-indigo-600 flex items-center dark:text-indigo-400">
-					<span>Teléfono:</span>
-				</dd>
-				<dd class="flex items-center">
-					<svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-2 text-slate-300">
-					</svg>
-					3740254 - 3344855
-				</dd>
-				</dl>
-				<dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
-				<dd class="text-indigo-600 flex items-center dark:text-indigo-400">
-					<span>E-mail:</span>
-				</dd>
-				<dd class="flex items-center">
-					<svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-2 text-slate-300">
-					</svg>
-					sennova.sena@gmail.com
-				</dd>
-				</dl>
-			</form>
 			</div>
 		</div>
-		</div>
 	</div>
-	</section>
-
-
 
 
 	<a href="#" class="back-to-top">

@@ -24,371 +24,496 @@ $tipoRol = $bd->consulta("SELECT * FROM roles");
 	<link href="img/favicoSENA.png" rel="icon" type="image/x-icon">
 	<title>SIDICA</title>
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/line-icons.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/owl.theme.css">
-	<link rel="stylesheet" href="css/nivo-lightbox.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/menu_sideslide.css">
-	<link rel="stylesheet" href="css/alertify.min.css">
-	<link rel="stylesheet" href="css/themes/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
-	<link rel="stylesheet" id="colors" href="css/colors/turquoise.css" type="text/css">
+	<link rel="stylesheet" href="css/tailwind.css">
+
+	<style>
+		body{
+			background-color: #025554 !important;
+		}
+		.md{
+			width: 100% !important;
+			height: 150% !important;
+			padding-bottom: 50px !important;
+			}
+
+			.text-home{
+			padding-top: 4em;
+			font-size: 3em;
+			line-height: 67px;
+			}
+			.description-header{
+			font-size: 1.5em;
+			}
+			.description-header button{
+			font-size: 1em;
+			}
+
+			.img-home{
+			position: absolute;
+			right: -64px;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 50%;
+			background-image: url("img/home/1 1.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			}
+			.img-share{
+			width: 200px !important;
+			height: 200px!important;
+			background-image: url("img/home/share.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			}
+			.img-form{
+			width: 400px !important;
+			height: 400px!important;
+			background-image: url("img/home/movl.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			}
+			.img-form2{
+			width: 400px !important;
+			height: 400px!important;
+			background-image: url("img/home/robot.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			}
+
+			@media screen and (min-width: 600px) {
+				.home{
+					display: flex;
+					flex-wrap: wrap;
+				}
+				.header{
+					max-width: 50% !important;
+					padding-right: 80px;
+				}
+
+			}
+
+			@media screen and (max-width: 600px) {
+				.text-home{
+					left: 6.2%;
+					right: 52.65%;
+					padding-top: 2em;
+					font-size: 2em;
+					line-height: 35px;
+				}
+				.img-share{
+					display: none;
+				}
+				.text-home2{
+					font-size: 0.7em;
+				}
+				.md{
+					padding-bottom: 20px !important;
+				}
+
+			}
+		</style>
+
+	<!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/85219bca29.js" crossorigin="anonymous"></script>
+
+	<!-- Tailwind -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- Bootstrapp -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
 
-	<header id="slider-area">
-		<nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
-			<div class="container">
-				<a class="navbar-brand" href="index.php"><span><img src="img/logo_sidica.png" class="tam_logo" alt=""></span><b>SIDICA</b></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="lni-menu"></i>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarCollapse">
-					<ul class="navbar-nav mr-auto w-100 justify-content-end">
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#slider-area">Inicio</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#services">Conócenos</a>
-						</li>
-						<!--<li class="nav-item">
-							<a class="nav-link page-scroll" href="#portfolios">Portafolio</a>
-						</li>-->
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#videos">Videos</a>
-						</li>
-						<!--<li class="nav-item">
-							<a class="nav-link page-scroll" href="#blog">Noticias</a>
-						</li>-->
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="#footer">Contactanos</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="ideascolombo.php">Ideas Colombo</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="javascript:void(0)" data-toggle="modal" data-target=".bd-example-modal-lg">Inscríbete</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link page-scroll" href="admin/index.php" target="_blank">Semillero - Web</a>
-						</li>
-					</ul>
+<div class="relative bg-third fixed top-0 shadow-xl w-100" style="z-index: 99;">
+		<div class="mx-auto py-1 md:px-24 px-6">
+			<div class="flex justify-between items-center md:justify-start ">
+				<div class="flex justify-start lg:w-0 lg:flex-1">
+					<a href="/">
+						<span class="sr-only">SIDICA</span>
+						<img class="h-10 w-auto sm:h-20 pt-3" src="img/ideascolombo/logo_sidica.png" alt="">
+					</a>
 				</div>
-			</div>
-		</nav>
-		<a href="javascript:void(0)" class="botonimagen"></a>
-		<div id="carousel-area">
-			<div id="carousel-slider" class="carousel slide carousel-fade" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-slider" data-slide-to="1"></li>
-					<li data-target="#carousel-slider" data-slide-to="2"></li>
-					<li data-target="#carousel-slider" data-slide-to="3"></li>
-				</ol>
-				<div class="carousel-inner" role="listbox">
-					<div class="carousel-item active">
-						<img class="img-fluid" src="img/slider/SLIDER-SIDICA4.png" alt="">
-						<div class="carousel-caption text-center">
-							
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="img-fluid" src="img/slider/SLIDER-SIDICA-01.png" alt="">
-						<div class="carousel-caption text-center">
-							
-						</div>
-					</div>
-					<div class="carousel-item">
-						<a href="javascript:void(0)" data-toggle="modal" data-target=".bd-example-modal-lg">
-							<img class="img-fluid" src="img/slider/SLIDER-SIDICA-02.png" alt="">
-							<div class="carousel-caption text-center">
-
-							</div>
-						</a>
-					</div>
-					<div class="carousel-item">
-						<img class="img-fluid" src="img/slider/01-01.png" alt="">
-						<div class="carousel-caption text-center">
-							
-						</div>
-					</div>
-				</div>
-				<a class="carousel-control-prev" href="#carousel-slider" role="button" data-slide="prev">
-					<span class="carousel-control" aria-hidden="true"><i class="lni-chevron-left"></i></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carousel-slider" role="button" data-slide="next">
-					<span class="carousel-control" aria-hidden="true"><i class="lni-chevron-right"></i></span>
-					<span class="sr-only">Next</span>
-				</a>
-			</div>
-		</div>
-	</header>
-
-	<section id="services" class="section">
-		<div class="container">
-			<div class="section-header">
-				<h2 class="section-title">Semillero De Investigación</h2>
-				<span>Sidica</span>
-				<p class="section-subtitle">Desarrollo tecnológico e innovación Colombo Alemán</p>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-xs-12">
-					<div class="item-boxes services-item wow fadeInDown" data-wow-delay="0.2s">
-						<div class="icon color-1">
-							<i class="lni-heart-filled"></i>
-						</div>
-						<h4>Visión</h4>
-						<p style="text-align: justify;">Consolidarnos como semillero Institucional de investigación, líderes en
-							Latinoamérica en investigación aplicada, desarrollo tecnológico e innovación a
-							través de la cooperación nacional e internacional, y la creación de centros de
-							formación tecnológicos especializados en las áreas de ELECTRÓNICA Y TELECOMUNICACIONES, TECNOLOGÍAS VIRTUALES y DISEÑO E
-							INGENIERÍA, con el fin de contribuir a la competitividad y productividad de la
-						región caribe conectados con el resto del país.</p>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6 col-xs-12">
-					<div class="item-boxes services-item wow fadeInDown" data-wow-delay="0.6s">
-						<div class="icon color-3">
-							<i class="lni-stats-up"></i>
-						</div>
-						<h4>Misión</h4>
-						<p style="text-align: justify;">El Semillero Institucional de Investigación del Colombo- SIDICA, es un
-							espacio formativo que fortalece la cultura de la investigación aplicada, el
-							desarrollo tecnológico y la innovación estratégica con aprendices SENA en el
-							proceso de formación tecnológica en áreas de ELECTRÓNICA Y
-							TELECOMUNICACIONES, TECNOLOGÍAS VIRTUALES y DISEÑO E
-							INGENIERÍA; conformando una planta de aprendices investigadores
-							comprometidos con el entorno, mediante el uso eficiente de los recursos
-							disponibles, que involucra diversas áreas como: telecomunicaciones,
-							electricidad y energías renovables no convencionales, mecatrónica,
-							mantenimiento de equipos biomédico, diseño y desarrollo de software,
-							materiales, soldadura, mecanizado, refrigeración, plásticos, diseño y
-							mantenimiento, que hacen parte de las redes de conocimiento de energía
-							eléctrica, telecomunicaciones, electrónica y automatización, Informática,
-						diseño y desarrollo de software y mecánica industrial.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="video-promo section">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12">
-					<div class="video-promo-content text-center">
-						<a href="video/video.mp4" class="video-popup"><i class="lni-film-play"></i></a>
-						<h2 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Sidica</h2>
-						<p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Semillero de investigación</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!--<section id="blog" class="section">
-		<div class="container">
-			<div class="section-header">
-				<h2 class="section-title">Noticias</h2>
-				<span>Noticias</span>
-			</div>
-			<div id="noticias_noti" class="row justify-content-center">
-				<?php /*foreach($noticiasPeque as $noti): 
-					$comentario = $bd->consulta("SELECT noticia_comentario.* FROM noticia_comentario INNER JOIN noticia_notificacion WHERE noticia_notificacion.id_noti = {$noti['id_noti']} AND noticia_notificacion.id_noti = noticia_comentario.id_noti");
-					$cont = $comentario->num_rows;*/ ?>
-
-					<div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-						<div class="blog-item-wrapper">
-							<div class="blog-item-img" style="width: 350px; height: 250px;">
-								<a href="post.php?id_noti=<?php //echo $noti['id_noti'] ?>">
-									<img src="img/blog/<?php //echo $noti['name_img'] ?>" style="width: 350px; height: 250px;">
-								</a>
-							</div>
-							<div class="blog-item-text">
-								<div class="date"><i class="lni-calendar"></i><?php //echo $noti['fecha'] ?></div>
-								<h3><a href="post.php?id_noti=<?php //echo $noti['id_noti'] ?>"><?php //echo nl2br(utf8_encode($noti['titulo'])) ?></a></h3>
-								<div class="meta-tags">
-									<span><a href="javascript:void(0)"><i class="lni-eye"></i> 664 Views</a></span>
-									<span><a href="post.php?id_noti=<?php //echo $noti['id_noti'] ?>"><i class="lni-bubble"></i> <?php //echo $cont; ?></a></span>
-									<span><a href="javascript:void(0)"><i class="lni-reply"></i> 332</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php //endforeach; ?>
-			</div>
-			<div id="noticias_noti2" class="row justify-content-center d-none">
-				<?php foreach($noticias as $noti): 
-					$comentario = $bd->consulta("SELECT noticia_comentario.* FROM noticia_comentario INNER JOIN noticia_notificacion WHERE noticia_notificacion.id_noti = {$noti['id_noti']} AND noticia_notificacion.id_noti = noticia_comentario.id_noti");
-					$cont = $comentario->num_rows; ?>
-
-					<div class="col-lg-4 col-md-6 col-xs-12 blog-item">
-						<div class="blog-item-wrapper">
-							<div class="blog-item-img" style="width: 350px; height: 250px;">
-								<a href="post.php?id_noti=<?php echo $noti['id_noti'] ?>">
-									<img src="img/blog/<?php echo $noti['name_img'] ?>" style="width: 350px; height: 250px;">
-								</a>
-							</div>
-							<div class="blog-item-text">
-								<div class="date"><i class="lni-calendar"></i><?php echo $noti['fecha'] ?></div>
-								<h3><a href="post.php?id_noti=<?php echo $noti['id_noti'] ?>"><?php echo nl2br(utf8_encode($noti['titulo'])) ?></a></h3>
-								<div class="meta-tags">
-									<span><a href="javascript:void(0)"><i class="lni-eye"></i> 664 Views</a></span>
-									<span><a href="post.php?id_noti=<?php echo $noti['id_noti'] ?>"><i class="lni-bubble"></i> <?php echo $cont; ?></a></span>
-									<span><a href="javascript:void(0)"><i class="lni-reply"></i> 332</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-			<div id="setting_btn" class="row">
-				<div class="col-12 text-center more">
-					<button id="more" class="filter active btn btn-common btn-effect">
-						Conocer más
+				<div class="-mr-2 -my-2 md:hidden">
+					<button tyype="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+						<span class="sr-only">Open menu</span>
+						<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="false">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
 					</button>
 				</div>
-				<div class="col-12 text-center d-none less mt-3">
-					<button id="less" class="filter active btn btn-common btn-effect">
-						Conocer menos
-					</button>
+				<div class="hidden md:flex items-center justify-end md:flex-2">
+					<nav class="hidden md:flex space-x-10 menu">
+						<a href="index.php" class="text-base font-medium text-dark ">Inicio</a>
+						<a href="index.php#conocenos" class="text-base font-medium text-dark "> Conocenos </a>
+						<a href="index.php#videos" class="text-base font-medium text-dark "> Videos </a>
+						<a href="index.php#contactanos" class="text-base font-medium text-dark "> Contactanos </a>
+						<a href="ideascolombo.php" class="text-base font-medium text-dark "> Ideas Colombo </a>
+					</nav>
+					<a href="encuestasidica.php" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-xl text-base font-medium text-dark btn-primary"> Inscribete </a>
 				</div>
 			</div>
 		</div>
-	</section>-->
 
-
-	<div id="videos" style="padding: 118px 0;" class="counters section bg-defult">
-		<div class="container">
-			<div class="row">
-				<?php 
-				foreach($videos as $vidio): ?>	
-					<div class="col-md-4 col-sm-12">
-						<div class="video-promo-content text-center">
-							<a href="<?php echo $vidio['url']; ?>" class="video-popup"><i class="lni-film-play"></i></a>
-							<h5 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms"><?php echo utf8_encode($vidio['titulo']) ?></h5>
+		<div class="modal md:hidden" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<img class="-m-3 p-3 h-20 w-auto sm:h-20 pt-3" src="../assets/img/logo_sidica.png" alt="">
+						<button type="button" data-bs-dismiss="modal" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+							<span class="sr-only">Close main menu</span>
+							<!-- Heroicon name: outline/x -->
+							<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="mt-6">
+							<nav class="grid gap-y-8">
+								<a href="index.php" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Inicio </span>
+								</a>
+								<a href="index.php#conocenos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Conocenos </span>
+								</a>
+								<a href="index.php#videos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Videos </span>
+								</a>
+								<a href="index.php#contactanos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Contactanos </span>
+								</a>
+								<a href="ideascolombo.php" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Ideas Colombo </span>
+								</a>
+							</nav>
+							<a href="encuestasidica.php" data-bs-dismiss="modal" class="block w-full px-5 mt-3 py-3 text-center font-medium primary bg-gray-50 hover:bg-gray-100"> Inscribete </a>
 						</div>
 					</div>
-				<?php endforeach; ?>
+				</div>
 			</div>
 		</div>
+
 	</div>
+	<!-- Header -->
+<section id="inicio" class="inicio">
+  <div class="relative bg-third md">
+    <div class="mx-auto md:px-24 px-6 home">
+      <div class="md:space-x-10 header">
+        <div class="title-header mb-5">
+          <h1 class="text-home primary">Semillero institucional de investigación <span class="secondary">SIDICA</span> del Colombo Alemán</h1>
+        </div>
+        <div class="description-header m-0 mb-5">
+          <p class="text-home2 m-0">El sistema de investigación SENNOVA junto con el Colombo Aleman  te invitan a incribirte y participar en nuestro semillero de investigación SIDICA </p>
+          <button class="btn-header m-0 mt-5 ml-8 whitespace-nowrap inline-flex items-center justify-center sm:py-2 border border-transparent rounded-md shadow-xl text-base font-medium text-white btn-secondary"> Saber más </button>
+        </div>
+      </div>
+      <div class="img-home d-none d-md-block"></div>
+    </div>
+  </div>
+</section>
+<!-- Videos -->
+<section id="videos" class="videos">
+  <div class="relative pt-32 mb-5" id="videos">
+    <div class="mx-auto md:px-24 px-6">
+      <div class="lg:text-center">
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white text-white-900 sm:text-4xl">Videos</p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-300 lg:mx-auto">Desarrollo tecnológico e innovación Colombo Alemán</p>
+      </div>
+      <div class="max-w-2xl mx-auto py-5 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="mt-2 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <div class="group relative">
+            <h2 class="text-2xl font-extrabold tracking-tight text-white mb-2">Semillero SIDICA</h2>
+            <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+              <iframe width="330" height="323" src="https://www.youtube.com/embed/Ix2w1YwlHYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="group relative">
+            <h2 class="text-2xl font-extrabold tracking-tight text-white mb-2">SIDICA - RedCOLSI</h2>
+            <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+              <iframe width="330" height="323" src="https://www.youtube.com/embed/Ix2w1YwlHYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="group relative">
+            <h2 class="text-2xl font-extrabold tracking-tight text-white mb-2">Invitación a RedCOLSI</h2>
+            <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+              <iframe width="330" height="323" src="https://www.youtube.com/embed/n_AZFxHe9ls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="group relative" id="conocenos" class="conocenos">
+            <h2 class="text-2xl font-extrabold tracking-tight text-white mb-2">Invitación a SIDICA</h2>
+            <div class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+              <iframe width="330" height="323" src="https://www.youtube.com/embed/mSRuN-viv_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section ></section>
+<!-- Misión y Visión -->
+<section>
+  <div class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
+      <div class="lg:text-center">
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-dark text-white-900 sm:text-4xl">SEMILLERO DE INVESTIGACIÓN</p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Desarrollo tecnológico e innovación Colombo Alemán</p>
+      </div>
+      <div class="mt-10">
+        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
+                <i class="fas fa-key"></i>
+              </div>
+              <p class="ml-16 text-xl text-dark leading-6 font-medium text-dark text-white-900">Misión</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">Consolidarnos como semillero Institucional de investigación, líderes en Latinoamérica en investigación aplicada, desarrollo tecnológico e innovación a través de la cooperación nacional e internacional, y la creación de centros de formación tecnológicos especializados en las áreas de ELECTRÓNICA Y TELECOMUNICACIONES, TECNOLOGÍAS VIRTUALES y DISEÑO E INGENIERÍA, con el fin de contribuir a la competitividad y productividad de la región caribe conectados con el resto del país.</dd>
+          </div>
 
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
+                <i class="fas fa-heart"></i>
+              </div>
+              <p class="ml-16 text-xl leading-6 font-medium text-dark text-dark-900">Visión</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">El Semillero Institucional de Investigación del Colombo- SIDICA, es un espacio formativo que fortalece la cultura de la investigación aplicada, el desarrollo tecnológico y la innovación estratégica con aprendices SENA en el proceso de formación tecnológica en áreas de ELECTRÓNICA Y TELECOMUNICACIONES, TECNOLOGÍAS VIRTUALES y DISEÑO E INGENIERÍA; conformando una planta de aprendices investigadores comprometidos con el entorno, mediante el uso eficiente de los recursos disponibles, que involucra diversas áreas como: telecomunicaciones, electricidad y energías renovables no convencionales, mecatrónica, mantenimiento de equipos biomédico, diseño y desarrollo de software, materiales, soldadura, mecanizado, refrigeración, plásticos, diseño y mantenimiento, que hacen parte de las redes de conocimiento de energía eléctrica, telecomunicaciones, electrónica y automatización, Informática, diseño y desarrollo de software y mecánica industrial.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Formulario -->
+<!-- <section id="formulario" class="formulario">
+  <div class="relative pt-32 mb-5">
+    <div class="mx-auto md:px-24 px-6">
+      <div class="mt-10 sm:mt-0">
+        <div class="md:grid md:grid-cols-3 md:gap-6">
+          <div class="md:col-span-1">
+            <div class="px-4 sm:px-0">
+              <h3 class="text-4xl text-white text-gray-900">Formulario de Inscripción</h3>
+              <div class="img-form d-none d-md-block"></div>
+              <div class="img-form2 d-none d-md-block"></div>
+            </div>
+          </div>
+          <div class="mt-5 md:mt-0 md:col-span-2">
+            <form action="#" method="POST">
+              <div class="shadow overflow-hidden sm:rounded-md">
+                <div class="px-4 py-5 bg-white sm:p-6">
+                  <div class="grid grid-cols-6 gap-6">
+                    <div class="col-span-12 sm:col-span-12">
+                      <label for="country" class="block text-sm font-medium text-gray-700">Rol</label>
+                      <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Administrador</option>
+                        <option>Aprendiz</option>
+                        <option>Aprendiz egresado</option>
+                        <option>Insructor</option>
+                        <option>Administrativo</option>
+                      </select>
+                    </div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="first-name" class="block text-sm font-medium text-gray-700">Nombre</label>
+                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
 
-	<section id="portfolios" class="section">
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="last-name" class="block text-sm font-medium text-gray-700">Apellido</label>
+                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="country" class="block text-sm font-medium text-gray-700">Tipo  Documento </label>
+                      <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Cedula de ciudadanía</option>
+                        <option>Cedula de extranjería</option>
+                        <option>Tarjeta de identidad</option>
+                        <option>Pasaporte</option>
+                      </select>
+                    </div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="first-name" class="block text-sm font-medium text-gray-700">Documento</label>
+                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="country" class="block text-sm font-medium text-gray-700">Tipo de sangre</label>
+                      <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                      </select>
+                    </div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="first-name" class="block text-sm font-medium text-gray-700">Fecha de nacimiento</label>
+                      <input type="date" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
 
-		<div class="container">
-			<div class="section-header">
-				<h2 class="section-title">Nuestro Trabajo</h2>
-				<span>Trabajos</span>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="street-address" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                      <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
 
-					<div class="controls text-center">
-						<a class="filter active btn btn-common btn-effect" data-filter="all">
-							Todos
-						</a>
-						<a class="filter btn btn-common btn-effect" data-filter=".fabrica">
-							Fabrica De Software
-						</a>
-						<a class="filter btn btn-common btn-effect" data-filter=".sennova">
-							Sennova
-						</a>
-						<a class="filter btn btn-common btn-effect" data-filter=".redcolsi">
-							Redcolsi
-						</a>
-					</div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="email-address" class="block text-sm font-medium text-gray-700">Correo</label>
+                      <input type="text" name="email-address" id="email-address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
 
-				</div>
-			</div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="first-name" class="block text-sm font-medium text-gray-700">Dirección</label>
+                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
 
-			<!--<div id="portfolio" class="row">
-				<?php 
-				//foreach($portafolio as $porta): ?>
-					<div class="col-lg-4 col-md-6 col-xs-12 mix development <?php //echo utf8_encode($porta['tipo']) ?>">
-						<div class="portfolio-item">
-							<div class="shot-item">
-								<img src="img/portfolio/<?php //echo $porta['nameimg'] ?>" alt="" />
-								<div class="single-content">
-									<div class="fancy-table">
-										<div class="table-cell">
-											<div class="zoom-icon">
-												<a class="lightbox" href="img/portfolio/<?php //echo $porta['nameimg'] ?>"><i class="lni-zoom-in item-icon"></i></a>
-											</div>
-											<a href="javascript:void(0)">Ver</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php //endforeach; ?>
-			</div>-->
-		</div>
-	</section>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="last-name" class="block text-sm font-medium text-gray-700">Ficha</label>
+                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
 
+                    <div class="col-span-12 sm:col-span-12">
+                      <label for="country" class="block text-sm font-medium text-gray-700">Programa de formación</label>
+                      <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>Análisis y Desarrollo de Sistemas de Información</option>
+                      </select>
+                    </div>
 
-	<footer>
+                    <div class="col-span-12 sm:col-span-12">
+                      <label for="country" class="block text-sm font-medium text-gray-700">Linea de investigación</label>
+                      <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>24 Horas</option>
+                      </select>
+                    </div>
 
-		<section id="footer" class="footer-Content">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-mb-12">
-						<h3>SIDICA</h3>
-						<div class="textwidget">
-							<p>Formar capital humano en las áreas de ELECTRÓNICA Y
-								TELECOMUNICACIONES, TECNOLOGÍAS VIRTUALES y DISEÑO E
-								INGENIERÍA, con habilidades y destrezas en actividades de investigación
-								aplicada, Desarrollo Tecnológico e Innovación, con el fin de incrementar la
-								capacidad de generar desarrollo tecnológico e innovación en las empresas de
-							la Región Caribe y Colombia.</p>
-						</div>
-						<ul class="footer-social">
-							<li><a class="facebook" href="https://fb.me/SidicaSena" target="_blank"><i class="lni-facebook-filled"></i></a></li>
-							<li><a class="google-plus" href="https://plus.google.com/113286666426953549863" target="_blank"><i class="lni-google-plus"></i></a></li>
-						</ul>
-					</div>
-					<div class="col-lg-4 offset-lg-2 col-md-4 offset-md-2 col-sm-6 col-xs-12 col-mb-12">
-						<div class="widget">
-							<h3 class="block-title">Contáctenos</h3>
-							<ul class="contact-footer">
-								<li>
-									<strong>Dirección :</strong> <span>Calle 30 No. 3E-164, Barranquilla (Atlántico)</span>
-								</li>
-								<li>
-									<strong>Teléfono :</strong> <span>3740254 - 3344855</span>
-								</li>
-								<li>
-									<strong>E-mail :</strong> <span><a href="mailto:sennova.sena@gmail.com">sennova.sena@gmail.com</a></span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="country" class="block text-sm font-medium text-gray-700">Trimestre</label>
+                      <select id="country" name="country" autocomplete="country-name" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                        <option>V</option>
+                        <option>VI</option>
+                        <option>VII</option>
+                      </select>
+                    </div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="first-name" class="block text-sm font-medium text-gray-700">Edad</label>
+                      <input type="number" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
 
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="first-name" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                      <input type="password" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                    <div class="col-span-12 sm:col-span-6">
+                      <label for="first-name" class="block text-sm font-medium text-gray-700">Confirmar contraseña</label>
+                      <input type="password" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                  </div>
+                </div>
+                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                  <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
 
-		<div id="copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="site-info float-left">
-							<p>	Todos los copyrights reservados &copy; 2018 - Diseñado por <a href="javascript:void(0)" rel="nofollow">Fabrica De Software</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+<!-- Footer -->
+<section id="contactanos" class="contactanos">
+  <div class="bg-third">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <h2 class="tracking-tight text-gray-900 ">
+        <span class="block text-3xl font-extrabold sm:text-4xl">Participa y Compite con nosotros.</span>
+        <span class="block text-3xl font-extrabold secondary mb-3 sm:text-4xl">SIDICA</span>
+        <span class="block text-base max-w-xl">Formar capital humano en las áreas de ELECTRÓNICA Y TELECOMUNICACIONES, TECNOLOGÍAS VIRTUALES y DISEÑO E INGENIERÍA, con habilidades y destrezas en actividades de investigación aplicada, Desarrollo Tecnológico e Innovación, con el fin de incrementar la capacidad de generar desarrollo tecnológico e innovación en las empresas de la Región Caribe y Colombia.</span>
+        <div class="space-x-2 flex text-sm font-bold mt-3">
+          <label>
+            <button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-white bg-secondary" type="button" aria-label="Like">
+              <i class="fab fa-facebook"></i>
+            </button>
+          </label>
+          <label>
+            <button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-white bg-secondary" type="button" aria-label="Like">
+              <i class="fab fa-twitter"></i>
+            </button>
+          </label>
+          <label>
+            <button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-white bg-secondary" type="button" aria-label="Like">
+              <i class="fab fa-instagram"></i>
+            </button>
+          </label>
+          <label>
+            <button class="flex-none flex items-center justify-center w-9 h-9 rounded-full text-white bg-secondary" type="button" aria-label="Like">
+              <i class="fab fa-google"></i>
+            </button>
+          </label>
+        </div>
+      </h2>
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+        <div class="flex font-sans">
+          <div class="">
+            <div class="img-share"></div>
+          </div>
+          <form class="flex-auto sm:p-6">
+            <div class="flex flex-wrap">
+              <div class="w-full flex-none mt-2 order-1 text-3xl font-bold secondary mb-3">
+                Contactanos
+              </div>
+            </div>
+            <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+              <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+                <span>Dirección:</span>
+              </dd>
+              <dd class="flex items-center">
+                <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-2 text-slate-300">
+                </svg>
+                Calle 30 No. 3E-164, Barranquilla (Atlántico)
+              </dd>
+            </dl>
+            <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+              <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+                <span>Teléfono:</span>
+              </dd>
+              <dd class="flex items-center">
+                <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-2 text-slate-300">
+                </svg>
+                3740254 - 3344855
+              </dd>
+            </dl>
+            <dl class="mt-4 text-xs font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+              <dd class="text-indigo-600 flex items-center dark:text-indigo-400">
+                <span>E-mail:</span>
+              </dd>
+              <dd class="flex items-center">
+                <svg width="2" height="2" aria-hidden="true" fill="currentColor" class="mx-2 text-slate-300">
+                </svg>
+                sennova.sena@gmail.com
+              </dd>
+            </dl>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 	<!-- MODAL DE REGISTRO - APRENDIZ SEMILLERO -->
 	<div id="mreg_sidica" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
@@ -662,27 +787,6 @@ $tipoRol = $bd->consulta("SELECT * FROM roles");
 			</div>
 		</div>
 	</div>
-	
-	<!-- Modal Ideas Colombo Start -->
-	<!--<div class="modal fade" id="ideasColombo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Ideas Colombo</h5>
-					<button id="cerrarVideo" type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<video autoplay controls muted style="width: 100%" id="videoIndex" class="embed-responsive-item"><source src="img/ideascolombo/IDEASCOLOMBO1.mp4" type="video/mp4"></video>
-				</div>
-				<div class="modal-footer">
-					<a href="ideascolombo.php" class="btn btn-warning">Saber Más</a>
-				</div>
-			</div>
-		</div>
-	</div>-->
-	<!-- Modal Ideas Colombo End -->
 		<a href="#" class="back-to-top">
 			<i class="lni-arrow-up"></i>
 		</a>
@@ -692,7 +796,6 @@ $tipoRol = $bd->consulta("SELECT * FROM roles");
 				<div class="double-bounce2"></div>
 			</div>
 		</div>
-
 		<script data-cfasync="false" src="js/email-decode.min.js">
 		</script><script src="js/jquery-min.js"></script>
 		<script src="js/popper.min.js"></script>

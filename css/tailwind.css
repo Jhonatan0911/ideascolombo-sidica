@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Raleway;
+    font-style: normal;
+  /* font-weight: bold; */
+}
+
+/* Colores globales */
+.primary{
+    color: #025554 !important;
+}
+.secondary{
+    color: #E99C3C !important;
+}
+
+/* Fondos globales */
+.bg-primary{
+    background-color: #025554 !important;
+}
+
+.bg-secondary{
+    background-color: #E99C3C !important;
+}
+
+.bg-third{
+    background-color: #FBF7ED !important;
+}
+
+/* Botones globales */
+.btn-primary{
+    background-color: #027B78 !important;
+}
+.btn-secondary{
+    background-color: #E99C3C !important;
+    border-radius: 20px !important;
+}
+.btn-third{
+    background-color: #FBF7ED !important;
+}
+
+.btn-primary:hover{
+    background-color: hsl(179, 97%, 20%) !important;
+}
+.btn-secondary:hover{
+    background-color: hsl(33, 80%, 45%) !important;
+}
+.btn-third:hover{
+    background-color: hsl(0, 0%, 70%) !important;
+}
+
+.btn-header{
+    width: 50% !important;
+    height: 80px !important;
+}
+
+@media screen and (max-width: 600px) {
+    .btn-header{
+        width: 50% !important;
+        height: 50px !important;
+    }
+}
+.modal-backdrop{
+    display: none !important;
+}
+.modal-header{
+    border-bottom-width: 0px !important;
+    padding-bottom: 0px !important;
+}
+.modal-body{
+    padding-top: 0px !important;
+}
+
+a {
+    font-size: 1em !important;
+}
+
+.bg-white .navbar-nav .nav-link:hover {
+    color: #6A1849 !important;
+}
+
+.menu a {
+    position: relative;
+    display: block;
+    padding: 5px;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #04a7a4, #037472, #013b3a);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu a:hover::before {
+    transform: scaleX(1);
+}
+
+.w100 {
+    max-width: 100vw !important;
+    width: 100vw !important;
+}
+.modal-backdrop{
+    display: none !important;
+}
+.modal-header{
+    border-bottom-width: 0px !important;
+    padding-bottom: 0px !important;
+}
+.modal-body{
+    padding-top: 0px !important;
+}

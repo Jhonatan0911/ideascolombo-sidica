@@ -24,125 +24,9 @@ $tipoRol = $bd->consulta("SELECT * FROM roles");
 	<link href="img/favicoSENA.png" rel="icon" type="image/x-icon">
 	<title>SIDICA</title>
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/line-icons.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/owl.theme.css">
-	<link rel="stylesheet" href="css/nivo-lightbox.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/menu_sideslide.css">
-	<link rel="stylesheet" href="css/alertify.min.css">
-	<link rel="stylesheet" href="css/themes/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
-	<link rel="stylesheet" id="colors" href="css/colors/turquoise.css" type="text/css">
-	<style>
-		.bg-white .navbar-nav .nav-link:hover {
-			color: #6A1849 !important;
-		}
+	<link rel="stylesheet" href="css/tailwind.css">
 
-		body {
-			font-family: Raleway !important;
-			font-style: normal !important;
-			background-color: #FBF7ED !important;
-		}
-
-		/* Colores globales */
-		.primary {
-			color: #025554 !important;
-		}
-
-		.secondary {
-			color: #E99C3C !important;
-		}
-
-		/* Fondos globales */
-		.bg-primary {
-			background-color: #025554 !important;
-		}
-
-		.bg-secondary {
-			background-color: #E99C3C !important;
-		}
-
-		.bg-third {
-			background-color: #FBF7ED !important;
-		}
-
-		/* Botones globales */
-		.btn-primary {
-			background-color: #027B78 !important;
-			border-color: #027B78 !important;
-		}
-
-		.btn-secondary {
-			background-color: #E99C3C !important;
-			border-radius: 20px !important;
-			border-color: #E99C3C !important;
-		}
-
-		.btn-third {
-			background-color: #FBF7ED !important;
-		}
-
-		.btn-primary:hover {
-			background-color: hsl(179, 97%, 20%) !important;
-		}
-
-		.btn-secondary:hover {
-			background-color: hsl(33, 80%, 45%) !important;
-		}
-
-		.btn-third:hover {
-			background-color: hsl(0, 0%, 70%) !important;
-		}
-
-		a {
-			font-size: 1em !important;
-		}
-
-		.menu a {
-			position: relative;
-			display: block;
-			padding: 5px;
-		}
-
-		.menu a::before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 2px;
-			background: linear-gradient(to right, #04a7a4, #037472, #013b3a);
-			z-index: 1;
-			transform: scaleX(0);
-			transform-origin: left;
-			transition: transform 0.5s ease-in-out;
-		}
-
-		.menu a:hover::before {
-			transform: scaleX(1);
-		}
-
-		.w100 {
-			max-width: 100vw !important;
-			width: 100vw !important;
-		}
-		.modal-backdrop{
-			display: none !important;
-		}
-		.modal-header{
-			border-bottom-width: 0px !important;
-			padding-bottom: 0px !important;
-		}
-		.modal-body{
-			padding-top: 0px !important;
-		}
-
-	</style>
 	<!-- Google fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -176,13 +60,13 @@ $tipoRol = $bd->consulta("SELECT * FROM roles");
 				</div>
 				<div class="hidden md:flex items-center justify-end md:flex-2">
 					<nav class="hidden md:flex space-x-10 menu">
-						<a href="#inicio" class="text-base font-medium text-dark ">Inicio</a>
-						<a href="#conocenos" class="text-base font-medium text-dark "> Conocenos </a>
-						<a href="#videos" class="text-base font-medium text-dark "> Videos </a>
-						<a href="#contactanos" class="text-base font-medium text-dark "> Contactanos </a>
-						<a routerLink="ideas-colombo" class="text-base font-medium text-dark "> Ideas Colombo </a>
+						<a href="index.php" class="text-base font-medium text-dark ">Inicio</a>
+						<a href="index.php#conocenos" class="text-base font-medium text-dark "> Conocenos </a>
+						<a href="index.php#videos" class="text-base font-medium text-dark "> Videos </a>
+						<a href="index.php#contactanos" class="text-base font-medium text-dark "> Contactanos </a>
+						<a href="ideascolombo.php" class="text-base font-medium text-dark "> Ideas Colombo </a>
 					</nav>
-					<a href="#formulario" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-xl text-base font-medium text-dark btn-primary"> Inscribete </a>
+					<a href="encuestasidica.php" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-xl text-base font-medium text-dark btn-primary"> Inscribete </a>
 				</div>
 			</div>
 		</div>
@@ -203,23 +87,23 @@ $tipoRol = $bd->consulta("SELECT * FROM roles");
 					<div class="modal-body">
 						<div class="mt-6">
 							<nav class="grid gap-y-8">
-								<a href="#inicio" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+								<a href="index.php" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
 									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Inicio </span>
 								</a>
-								<a href="#conocenos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+								<a href="index.php#conocenos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
 									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Conocenos </span>
 								</a>
-								<a href="#videos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+								<a href="index.php#videos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
 									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Videos </span>
 								</a>
-								<a href="#contactanos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+								<a href="index.php#contactanos" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
 									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Contactanos </span>
 								</a>
 								<a routerLink="ideas-colombo" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
 									<span data-bs-dismiss="modal" class="ml-3 text-base font-medium text-gray-900"> Ideas Colombo </span>
 								</a>
 							</nav>
-							<a href="#formulario" data-bs-dismiss="modal" class="block w-full px-5 mt-3 py-3 text-center font-medium primary bg-gray-50 hover:bg-gray-100"> Inscribete </a>
+							<a href="encuestasidica.php" data-bs-dismiss="modal" class="block w-full px-5 mt-3 py-3 text-center font-medium primary bg-gray-50 hover:bg-gray-100"> Inscribete </a>
 						</div>
 					</div>
 				</div>
